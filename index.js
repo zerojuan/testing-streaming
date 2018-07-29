@@ -9,5 +9,5 @@ const server = restify.createServer();
 server.get('/stream', respond);
 
 server.listen(8081, () => {
-	console.log('%s listening at %s', server.name, server.port);
+	console.log('%s listening at %s', server.name, server.url);
 });
