@@ -1,0 +1,24 @@
+{
+  "name": "testing-streaming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"update-nginx": "./ci/update-nginx.sh",
+	"start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerojuan/testing-streaming.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerojuan/testing-streaming/issues"
+  },
+  "homepage": "https://github.com/zerojuan/testing-streaming#readme",
+  "dependencies": {
+    "restify": "^7.2.1"
+  }
+}
