@@ -20,7 +20,9 @@
   "homepage": "https://github.com/zerojuan/testing-streaming#readme",
   "dependencies": {
     "delay": "^3.0.0",
+    "express": "^4.16.3",
     "raven": "^2.6.3",
-    "restify": "^7.2.1"
+    "restify": "^7.2.1",
+    "stream-chunker": "^1.2.8"
   }
 }
