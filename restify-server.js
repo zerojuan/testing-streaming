@@ -1,4 +1,5 @@
 const restify = require('restify');
+const fs = require('fs');
 const Raven = require('raven');
 Raven.config('https://99bd8dda387a4397a195563db0eef302@sentry.io/1251829').install();
 
@@ -18,13 +19,14 @@ async function respond( req, res, next ) {
 	res.writeHead(200, {
        		'Content-Type': 'application/json',
 		    'X-Accel-Buffering': 'no'
-   	});
-	for( let i = 0; i < loopsize; i++ ) {
-		if ( i % 1000000 === 0)
-			s.push('i');
-	}
+       });
+    const s = fs.createReadStream('file.txt');
+	// for( let i = 0; i < loopsize; i++ ) {
+	// 	if ( i % 1000000 === 0)
+	// 		s.push('i');
+	// }
 
-	s.push(null);
+	// s.push(null);
 	s.pipe(chunker).pipe(res);
 
 	return next();
